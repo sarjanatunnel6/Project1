@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            border: 10px solid black;
+            padding: 20px;
+            text-align: center;
+            margin-top: 10%;
+            position: relative;
+        }
+        h1 {
+            color: #000000;
+            font-size: 2.5em;
+        }
+        p {
+            color: #000000;
+            font-size: 1.5em;
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            text-align: left;
+            border-collapse: collapse;
+        }
+        th {
+            padding: 10px;
+            background-color: #000000;
+            color: #ffffff;
+            border: 1px solid #000000;
+        }
+        td {
+            padding: 10px;
+            border: 1px solid #000000;
+        }
+        .marquee {
+            overflow: hidden;
+            white-space: nowrap;
+            animation: marquee 10s linear infinite;
+        }
+        @keyframes marquee {
+            from { text-indent: 100% }
+            to { text-indent: -100% }
+        }
+        .payment-methods {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .payment-method {
+            border: 1px solid #000;
+            padding: 10px;
+            margin: 0 10px;
+        }
+        .payment-method img {
+            width: 70px;
+            height: 70px;
+        }
+        .rules, .contact {
+            border: 1px solid #000;
+            background-color: #fff;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .contact {
+            background-color: #f00;
+            color: #fff;
+        }
+    </style>
+
+    <script>
+        window.onload = function() {
+            setInterval(function(){
+                document.querySelectorAll("table th, table td").forEach(e => e.style.borderColor = getRandomColor());
+            }, 1000);
+
+            var runningText1 = "Selamat datang Di Toko Kami,Kami Menyediakan Akun Vpn Seperti SSH,VMESS,VLESS,TROJAN,SHADOWSHOCK ";
+            var runningText2 = "Terima Kasih Sudah Berkunjung Ke Toko Kami ";
+            var runningTextElement1 = document.getElementById("running-text-1");
+            var runningTextElement2 = document.getElementById("running-text-2");
+
+            for(var i=0; i<runningText1.length; i++){
+                var span1 = document.createElement('span');
+                span1.textContent = runningText1[i];
+                span1.style.color = getRandomColor();
+                runningTextElement1.appendChild(span1);
+            }
+
+            for(var i=0; i<runningText2.length; i++){
+                var span2 = document.createElement('span');
+                span2.textContent = runningText2[i];
+                span2.style.color = getRandomColor();
+                runningTextElement2.appendChild(span2);
+            }
+
+            setInterval(function(){
+                var children1 = runningTextElement1.children;
+                for(var i=0; i<children1.length; i++){
+                    children1[i].style.color = getRandomColor();
+                }
+
+                var children2 = runningTextElement2.children;
+                for(var i=0; i<children2.length; i++){
+                    children2[i].style.color = getRandomColor();
+                }
+            }, 1000);
+        }
+
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>SARJANA TUNNEL</h1>
+        <p>Selamat datang</p>
+        <div id="running-text-1" class="marquee"></div>
+        <table>
+            <tr>
+                <th>Produk</th>
+                <th>Deskripsi</th>
+                <th>Harga</th>
+            </tr>
+            <tr>
+                <td>SSH</td>
+                <td>SUPORT UDP,SLOW DNS,WEBSOCKET,SSL</td>
+                <td>Rp6.000</td>
+            </tr>
+            <tr>
+                <td>VMESS</td>
+                <td>VMESS WS,VMESS TLS,VMESS GRPC</td>
+                <td>Rp6.000</td>
+            </tr>
+            <tr>
+                <td>VLESS</td>
+                <td>VLESS WS,VLESS TLS,VLESS GRPC</td>
+                <td>Rp6,000</td>
+            </tr>
+            <tr>
+                <td>TROJAN</td>
+                <td>TROJAN WS,TROJAN GRPC</td>
+                <td>Rp6,000</td>
+            </tr>
+            <tr>
+                <td>SHADOWSHOCK</td>
+                <td>NOT</td>
+                <td>Rp6,000</td>
+            </tr>
+        </table>
+        <h2>Metode Pembayaran:</h2>
+<div class="payment-methods">
+    <div class="payment-method">
+        <h3>DANA</h3>
+    </div>
+    <div class="payment-method">
+        <h3>QRIS</h3>
+    </div>
+</div>
+
+
+
+        <div id="running-text-2" class="marquee"></div>
+        <div class="rules">
+            <h3>Rules:</h3>
+            <ol>
+                <li>✳️𝗦𝗘𝗥𝗩𝗘𝗥 𝗦𝗜𝗡𝗚𝗔𝗣𝗢𝗥𝗘 🇸🇬</li>
+                <li>✳️𝗕𝗜𝗦𝗔 𝗧𝗥𝗜𝗔𝗟 (wajib) </li>
+                <li>✳️𝗦𝗨𝗣𝗣𝗢𝗥𝗧 𝗩𝗖 & 𝗚𝗔𝗠𝗜𝗡𝗚 (𝘃𝟮𝗿𝗮𝘆)</li>
+                <li>✳️𝐍𝐎𝐓 𝐒𝐔𝐏𝐏𝐎𝐑𝐓 𝐒𝐓𝐁</li>
+                <li>✳️𝙎𝙀𝙇𝘼𝙇𝙐 𝙎𝙀𝘿𝙄𝘼 𝘾𝙊𝙉𝙁𝙄𝙂 𝘼𝙇𝙇 𝘼𝙋𝙆</li>
+            </ol>
+        </div>
+        <div class="contact">
+            <p>𝙏𝙍𝙄𝘼𝙇 & 𝙊𝙍𝘿𝙀𝙍</p>
+            <p>
+                <a href="https://wa.me/6287711328582" target="_blank">WhatsApp</a>
+                  <span>Atau</span>
+                <a href="https://t.me/SARJANATUNNEL" target="_blank">Telegram</a>
+            </p>
+        </div>
+        <!DOCTYPE html>
+<html>
+<body>
+    <h2>Informasi Pengguna</h2>
+    <p id="jam"></p>
+    <p id="hari"></p>
+    <p id="tanggal"></p>
+    <p id="ip"></p>
+    <p id="device"></p>
+
+    <script>
+        // Array nama hari dalam Bahasa Indonesia
+        const namaHari = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+
+        // Fungsi untuk mendapatkan waktu, hari, dan tanggal saat ini
+        function getTimeAndDate() {
+            let now = new Date();
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+            let seconds = now.getSeconds();
+            let day = namaHari[now.getDay()];
+            let date = now.getDate();
+            let month = now.getMonth() + 1; // Bulan dimulai dari 0
+            let year = now.getFullYear();
+
+            document.getElementById('jam').innerHTML = `Jam: ${hours}:${minutes}:${seconds}`;
+            document.getElementById('hari').innerHTML = `Hari: ${day}`;
+            document.getElementById('tanggal').innerHTML = `Tanggal: ${date}-${month}-${year}`;
+
+            document.getElementById('jam').style.color = getRandomColor();
+            document.getElementById('hari').style.color = getRandomColor();
+            document.getElementById('tanggal').style.color = getRandomColor();
+        }
+
+        // Mendapatkan IP pengguna
+        fetch('https://api.ipify.org?format=json')
+            .then(results => results.json())
+            .then(data => {
+                document.getElementById('ip').innerHTML = `IP Pengguna: ${data.ip}`;
+                document.getElementById('ip').style.color = getRandomColor();
+            })
+            .catch(() => {
+                document.getElementById('ip').innerHTML = `IP Pengguna: tidak dapat ditemukan`;
+                document.getElementById('ip').style.color = getRandomColor();
+            });
+
+        // Mendapatkan jenis perangkat pengguna
+        let deviceType = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? 'Mobile' : 'Desktop';
+        document.getElementById('device').innerHTML = `Device: ${deviceType}`;
+        document.getElementById('device').style.color = getRandomColor();
+
+        // Fungsi untuk mendapatkan warna acak
+        function getRandomColor() {
+            let letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        // Mengatur interval untuk update waktu setiap detik
+        setInterval(getTimeAndDate, 1000);
+    </script>
+</body>
+</html>
+
+    </div>
+</body>
+</html>
+ 
